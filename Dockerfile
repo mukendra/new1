@@ -16,8 +16,8 @@ RUN a2ensite  default-ssl.conf
 RUN apt-get -y install php5
 RUN apt-get -y install php5-mysql wget nano
 WORKDIR /opt
-RUN wget https://wordpress.org/latest.tar.gz
-RUN tar xvzf latest.tar.gz
+RUN git clone -b dev https://github.com/mukendra/new.git
+#RUN tar xvzf latest.tar.gz
 RUN chmod 777 /opt/wordpress
 RUN chmod 777 /opt/wordpress/*
 #RUN cp /opt/wp-config.php /opt/wp-config.php
