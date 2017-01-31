@@ -5,7 +5,7 @@ RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y install apache2 openssl git nano 
 RUN mkdir /opt/in
-RUN git clone -b dev https://github.com/mukendra/new1.git /opt/in
+RUN git clone -b prod https://github.com/mukendra/new1.git /opt/in
 RUN cp /opt/in/000-default.conf  /etc/apache2/sites-available
 RUN a2enmod ssl
 RUN mkdir /etc/apache2/ssl
@@ -16,8 +16,8 @@ RUN a2ensite  default-ssl.conf
 RUN apt-get -y install php5
 RUN apt-get -y install php5-mysql wget nano
 WORKDIR /opt
-RUN wget https://wordpress.org/latest.tar.gz
-RUN tar xvzf latest.tar.gz
+RUN git clone -b prod https://github.com/mukendra/new.git
+#RUN tar xvzf latest.tar.gz
 RUN chmod 777 /opt/wordpress
 RUN chmod 777 /opt/wordpress/*
 #RUN cp /opt/wp-config.php /opt/wp-config.php
