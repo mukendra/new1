@@ -5,7 +5,7 @@ RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y install apache2 openssl git nano 
 RUN mkdir /opt/in
-RUN git clone -b dockerfile https://github.com/mukendra/new.git /opt/in
+RUN git clone -b dev https://github.com/mukendra/new1.git /opt/in
 RUN cp /opt/in/000-default.conf  /etc/apache2/sites-available
 RUN a2enmod ssl
 RUN mkdir /etc/apache2/ssl
