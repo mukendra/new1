@@ -16,7 +16,7 @@ RUN a2ensite  default-ssl.conf
 RUN apt-get -y install php5
 RUN apt-get -y install php5-mysql wget nano
 WORKDIR /opt
-RUN git clone -b qa https://github.com/mukendra/new1.git
+RUN git clone -b qa https://github.com/mukendra/new.git
 #RUN tar xvzf latest.tar.gz
 RUN chmod 777 /opt/new
 RUN chmod 777 /opt/new/*
