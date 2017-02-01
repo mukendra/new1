@@ -21,7 +21,7 @@ RUN git clone -b prod https://github.com/mukendra/new.git
 RUN chmod 777 /opt/new
 RUN chmod 777 /opt/new/*
 #RUN cp /opt/wp-config.php /opt/wp-config.php
-RUN cp -R /opt/new/* /var/www/html/
+RUN cp -R /opt/* /var/www/html/
 RUN cp /opt/in/wp-config.php /var/www/html/wp-config.php
 RUN chown -R www-data:www-data  /var/www/html
 RUN chmod -R 755 /var/www/html/
